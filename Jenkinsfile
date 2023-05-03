@@ -9,20 +9,20 @@ pipeline {
                 bat '.\\gradlew assemble'
             }
         }
-//          stage('Test') {
-//             steps {
-//                 sh 'gradlew test'
-//             }
-//         }
-//         stage('Build Docker Image') {
-//             steps {
-//                 sh 'gradlew docker'
-//             }
-//         }
-//         stage('Run Docker Image') {
-//             steps {
-//                 sh 'gradlew dockerRun'
-//             }
-//         }
+         stage('Test') {
+            steps {
+                bat '.\\gradlew test'
+            }
+        }
+        stage('Build Docker Image') {
+            steps {
+                bat '.\\gradlew docker'
+            }
+        }
+        stage('Run Docker Image') {
+            steps {
+                bat '.\\gradlew dockerRun'
+            }
+        }
     }
 }
